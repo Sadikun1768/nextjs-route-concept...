@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 const UsersSchema = new mongoose.Schema({
     name: {
         type: String,
-        default: "Ano",
+        default: "anonymous",
         min: 2,
         max: 100,
     },

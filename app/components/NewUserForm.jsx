@@ -1,28 +1,10 @@
+import { addUser } from "@/actions/users";
 import { connect } from "mongoose";
+
 
 export default function NewUserForm() {
 
-    const addUser = async(formData) => {
-
-        "use server";
-
-        // console.log(formData.get('name'));
-        // console.log(formData.get('email'));
-
-        const name = formData.get("name");
-        const email = formData.get("email");
-
-        const UserData = {
-            name,
-            email,
-        }
-
-        //ata database e save korar jonnno akta function connectMongo()..
-        await connectMongo();
-
-        //insert into database..
-     
-    }
+    
 
     return (
         <form action={addUser}>
@@ -37,7 +19,7 @@ export default function NewUserForm() {
             </div>
             <div>
                 <input
-                    email="text"
+                    type="email"
                     className="max-w-full p-2 mb-2 border border-gray-400 rounded"
                     name="email"
                     placeholder="Enter Your Email Here"
