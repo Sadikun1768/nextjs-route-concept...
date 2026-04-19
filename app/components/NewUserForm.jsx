@@ -1,10 +1,11 @@
+"use client";
+
 import { addUser } from "@/actions/users";
-import { connect } from "mongoose";
+
+import Button from "./ui/Button";
 
 
 export default function NewUserForm() {
-
-    
 
     return (
         <form action={addUser}>
@@ -26,8 +27,16 @@ export default function NewUserForm() {
                 />
             </div>
             <div>
-                <button type="submit" className="text-cyan-500 bg-amber-50 p-2 rounded w-full">Submit</button>
+                <input
+                    type="hidden"
+                    className="max-w-full p-2 mb-2 border border-gray-400 rounded"
+                    name="test"
+                    value="success"
+                /> 
             </div>
+
+            <Button />
+
         </form>
     );
 }

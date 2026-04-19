@@ -1,22 +1,26 @@
 import Image from "next/image";
 import NewUserForm from "./components/NewUserForm";
 import UserList from "./components/UserList";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center">
-      <main className="flex flex-col flex-1 py-30 px-30 max-w-full items-center">
-       <div>
+    <div className="">
 
-        <h1 className=" text-cyan-500 font-extrabold">User Registration</h1>
-      
-        <NewUserForm />
 
-        <UserList />
+      <Navbar />
 
-      </div>
 
-      </main>
+
+      <h1 className=" text-cyan-500 font-extrabold">User Registration</h1>
+
+      <NewUserForm />
+
+      <UserList />
+
+
+
+
     </div>
   );
 }

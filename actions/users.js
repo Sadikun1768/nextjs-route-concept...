@@ -5,6 +5,9 @@ import connectMongo from "@/dbConnect/connectMongo";
 import User from "@/models/user";
 import { revalidatePath } from "next/cache";
 
+import wait from "@/util/wait";
+
+
 export const addUser = async (formData) => {
 
     // console.log(formData.get('name'));
@@ -12,16 +15,22 @@ export const addUser = async (formData) => {
 
     const name = formData.get("name");
     const email = formData.get("email");
-
+    const test = formData.get("test");
     const userData = {
         name,
         email,
+        test,
     }
+ console.log(test);
 
     //ata database e save korar jonnno akta function connectMongo()..
     try {
         await connectMongo();
         //insert into database..
+
+        //dely for
+        await wait(4000);
+
         await new User(userData).save();
         //revalidate users
         revalidatePath("/");
