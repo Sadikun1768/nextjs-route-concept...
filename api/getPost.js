@@ -7,7 +7,7 @@ export default async function getPost(id) {
 
    const posts = await res.json();
 
-   await wait (4000);
+   await wait (2000);
 
    return posts;
 }

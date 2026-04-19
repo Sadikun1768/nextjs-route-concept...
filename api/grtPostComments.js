@@ -7,7 +7,7 @@ export default async function getPostComments(id) {
     );
     const comments = await res.json();
     console.log(comments);
-    await wait(4000);
+    await wait(6000);
 
     return comments;
 
